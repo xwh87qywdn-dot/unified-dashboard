@@ -1,0 +1,9 @@
+{
+  "name": "unified-dashboard (Codespaces)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [3000, 5555],
+  "postCreateCommand": "pnpm install && pnpm prisma:generate",
+  "postStartCommand": "bash .devcontainer/postStart.sh"
+}
