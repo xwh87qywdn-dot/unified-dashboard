@@ -59,7 +59,6 @@ export default function AIWorkspacePage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         type: "login",
-        ip: "AUTO",
         userAgent: navigator.userAgent,
         details: "User opened AI workspace",
       }),
