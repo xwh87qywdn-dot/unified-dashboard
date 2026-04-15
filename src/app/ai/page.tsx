@@ -48,11 +48,24 @@ export default function AIWorkspacePage() {
   const [saved, setSaved] = useState(false);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount and log the visit
   useEffect(() => {
     const loaded = loadNotes();
     setNotes(loaded);
     setSelectedId(loaded[0]?.id ?? "");
+
+    fetch("/api/log", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "login",
+        ip: "AUTO",
+        userAgent: navigator.userAgent,
+        details: "User opened AI workspace",
+      }),
+    }).catch(() => {
+      // non-critical – ignore errors
+    });
   }, []);
 
   const selected = notes.find((n) => n.id === selectedId) ?? null;
