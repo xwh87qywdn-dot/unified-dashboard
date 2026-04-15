@@ -12,7 +12,7 @@ cron.schedule("0 5 * * *", async () => {
   });
 
   const report = logs
-    .map((l) => `${l.createdAt} | ${l.type} | ${l.ip} | ${l.details}`)
+    .map((log) => `${log.createdAt} | ${log.type} | ${log.ip} | ${log.details}`)
     .join("\n");
 
   await sendReportEmail(report);
