@@ -24,7 +24,7 @@ export default function HomePage() {
           Repository: <strong>xwh87qywdn-dot/unified-dashboard</strong>
         </p>
         <p style={{ marginTop: "0.5rem" }}>
-          Stack: Next.js 14 · Prisma · PostgreSQL · TypeScript · pnpm
+          Stack: Next.js 15 · Prisma · PostgreSQL · TypeScript · pnpm
         </p>
       </div>
 

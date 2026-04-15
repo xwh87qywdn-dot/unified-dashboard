@@ -32,7 +32,7 @@ function loadNotes(): Note[] {
       id: "welcome",
       title: "Welcome to AI Workspace",
       content:
-        "This is your AI workspace.\n\nUse this area to keep prompts, notes, and instructions for working with this project.\n\nEach note is saved locally in your browser.\n\n---\n\nExample prompt:\n\nYou are a senior full-stack engineer working on the unified-dashboard project (Next.js 14 + Prisma + PostgreSQL). Help me...",
+        "This is your AI workspace.\n\nUse this area to keep prompts, notes, and instructions for working with this project.\n\nEach note is saved locally in your browser.\n\n---\n\nExample prompt:\n\nYou are a senior full-stack engineer working on the unified-dashboard project (Next.js 15 + Prisma + PostgreSQL). Help me...",
       updatedAt: Date.now(),
     },
   ];
