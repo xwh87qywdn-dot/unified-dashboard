@@ -13,6 +13,7 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres:postgres@db:5432/unified_dashboard?schema=public
       APP_BASE_URL: http://localhost:3000
+      PORT: "3000"
       COOKIE_SECURE: "false"
       COOKIE_SAMESITE: lax
 
