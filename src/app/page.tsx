@@ -7,7 +7,7 @@ export default function HomePage() {
       <p style={{ color: "#64748b", marginBottom: "1.5rem", fontSize: "0.875rem" }}>
         Central control area for this project. Open in{" "}
         <a
-          href="https://codesandbox.io/p/github/xwh87qywdn-dot/unified-dashboard/main"
+          href="https://codesandbox.io/p/github/mozeson-bu/unified-dashboard/main"
           target="_blank"
           rel="noreferrer"
           style={{ color: "#a78bfa" }}
@@ -21,7 +21,7 @@ export default function HomePage() {
         <h2>Project</h2>
         <p>
           <span className="status-dot" />
-          Repository: <strong>xwh87qywdn-dot/unified-dashboard</strong>
+          Repository: <strong>mozeson-bu/unified-dashboard</strong>
         </p>
         <p style={{ marginTop: "0.5rem" }}>
           Stack: Next.js 15 · Prisma · PostgreSQL · TypeScript · pnpm
