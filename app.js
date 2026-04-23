@@ -11,7 +11,7 @@ async function sharePage() {
   try {
     if (navigator.share) {
       await navigator.share(shareData);
-      shareStatus.textContent = "הקישור שותף בהצלחה";
+      shareStatus.textContent = "השיתוף הושלם";
       return;
     }
 
@@ -21,9 +21,15 @@ async function sharePage() {
       return;
     }
 
-    throw new Error("Sharing is not supported");
+    shareStatus.textContent = "שיתוף לא נתמך בדפדפן זה";
+    return;
   } catch (error) {
-    console.error("Share failed", error);
+    if (error instanceof DOMException && error.name === "AbortError") {
+      shareStatus.textContent = "השיתוף בוטל";
+      return;
+    }
+
+    console.error("Share/clipboard operation failed", error);
     shareStatus.textContent = "לא ניתן לשתף כרגע";
   }
 }
